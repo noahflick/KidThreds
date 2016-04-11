@@ -1,5 +1,4 @@
 # KidThreds
-Just Testing
 
 ## Summary
 KidThreds is an app that allows parents to list clothes that their kids have grown out of in order to sell or give away to other parents. 
