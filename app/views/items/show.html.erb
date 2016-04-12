@@ -1,0 +1,17 @@
+
+<div class ='container'>
+<h3><%= @item.description %></h3><% if @item.user == current_user %>
+<%= link_to "edit", edit_item_path(@item) %>
+<%= link_to "delete" %>
+
+<% end %>
+
+<p>Size: <%= @item.size %></p>
+<% if @item.gender %>
+<p>Gender: <%= @item.gender %></p>
+<% end %>
+<p>Owner: <%= link_to 'view user', user_path(@item.user) %> </p>
+
+
+
+</div>

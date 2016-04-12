@@ -1,21 +1,18 @@
 
-<div class ='container-fluid' style="text-align: center">
+<div class ='container' style="text-align: center">
   <div class ='row'>
-    <div class ='col-sm-6'>KidThreds lets you post your kids' outgrown clothes for sale/giveaway to other parents.<br/>
+    <div>KidThreds lets you post your kids' outgrown clothes for sale/giveaway to other parents.<br/>
     Already have an account?
     </div>
     <br/>
-
   </div>
-  <div class ='row'>
   <% if current_user %>
   <% else %>
   <div class="form-group">
     <%= link_to "Login", login_path, class: "btn btn-default" %>
   </div>
-  </div>
   <div class ='row'>
-    <%= link_to "Register", register_path, class: "btn btn-default" %>
+    <%= link_to "Register New Account", register_path, class: "btn btn-default" %>
     <% end %>
   </div>
 </div>

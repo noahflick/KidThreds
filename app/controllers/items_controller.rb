@@ -32,6 +32,12 @@ class ItemsController < ApplicationController
   def edit
   end
 
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    redirect_to user_path(current_user)
+  end
+
 
   def check_owner
     @item = Item.find(params[:id])

@@ -13,6 +13,10 @@
             <%= item.size %>
           </div>
           <%= link_to "more info", item_path(item) %>
+          <% if item.user == current_user%>
+          | <%= link_to "edit", edit_item_path(item) %>
+          | <%= link_to "delete" %>
+          <% end %>
     </div>
     <br/>
 <% end %>
