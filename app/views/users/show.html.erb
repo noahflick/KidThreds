@@ -1,17 +1,16 @@
-<h1> <%= @user.name %> </h1>
-
-<p>Hello, <%= @user.name %>, Here are the items you have listed:</p>
+<div class ='container-fluid'>
+<h3>Your Items:</h3>
 
   <div class = 'row'>
-    <div class = 'col-sm-2'>description</div>
-    <div class = 'col-sm-2'>size</div>
-    <div class = 'col-sm-2'>gender</div>
+    <div class = 'col-xs-3'>description</div>
+    <div class = 'col-xs-1'>size</div>
+    <div class = 'col-xs-2'>gender</div>
   </div>
  <% @user.items.each do |item| %>
   <div class = 'row'>
-    <div class = 'col-sm-2'><%= item.description %></div>
-    <div class = 'col-sm-2'><%= item.size %></div>
-    <div class = 'col-sm-2'><%= item.gender %></div>
-  </div>
-
+    <div class = 'col-xs-3'><%= item.description %></div>
+    <div class = 'col-xs-1'><%= item.size %></div>
+    <div class = 'col-xs-2'><%= item.gender %></div>
+  </div><br/>
+<div>
 <% end %>

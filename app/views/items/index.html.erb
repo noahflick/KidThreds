@@ -1,0 +1,21 @@
+<div class ='container'>
+<h3>Recent Threds</h3>
+
+<% @items.each do |item| %>
+    <div class='row'>
+          <div class ='col-xs-4'>
+            <strong><%= item.description %></strong>
+          </div>
+          <div class ='col-xs-3'>
+            <%= item.gender %>
+          </div>
+          <div class ='col-xs-2'>
+            <%= item.size %>
+          </div>
+          <%= link_to "more info", item_path(item) %>
+    </div>
+    <br/>
+<% end %>
+
+</div>
+

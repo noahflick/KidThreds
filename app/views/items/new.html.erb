@@ -1,0 +1,20 @@
+<h3>What do you have?</h3>
+
+<%= form_for @item do |f| %>
+    <% flash.each do |key, msg| %>
+        <div><%= msg %></div>
+    <% end %>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+    <%= f.label :size %>
+    <%= f.text_field :size %>
+
+    <%= f.select :gender, [['gender'],["Boys\'",'Boy\'s'],['Girls\'','Girls\''],['Unisex','Unisex']] %>
+
+
+
+    <%= f.submit  "Post" %>
+<% end %>
+

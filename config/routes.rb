@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
 
   get 'welcome/index'
-
   root 'welcome#index'
 
   resources :users, except: [:index, :destroy]
-
   resources :sessions, only: [:new, :create, :destroy]
+  resources :items
 
   get "/register", to: "users#new"
   get "/login", to: "sessions#new"
+  delete "/logout", to: "sessions#destroy"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
