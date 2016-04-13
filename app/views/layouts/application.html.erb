@@ -6,10 +6,18 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body >
+
 <div id ='Header' style ='text-align: center'>
   <h1>KidThreds</h1>
-  <p id ='notice'><%= notice %></p>
+  <div id="flash">
+        <% flash.keys.each do |k| %>
+            <div class="<%= k %>">
+                <%= flash[k] %>
+            </div>
+        <% end %>
+  </div>
+
 </div>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -28,9 +36,12 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="<%= 'active' if current_page? new_item_path%>"><%= link_to "Post New Item", new_item_path %></li>
-        <li class="<%= 'active' if current_page? users_path %>"><%= link_to "View/Edit Profile", users_path %></li>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+          <li class="<%= 'active' if current_page? edit_user_path(current_user) %>"><%= link_to 'Edit My Profile', edit_user_path(current_user) %></li>
+          <% end %>
           <li class="<%= 'active' if current_page? items_path %>"><%= link_to 'View all Threds', items_path %></li>
         <% if current_user %>
           <li class="<%= 'active' if current_page? user_path(current_user)%>"><%= link_to 'My Items', user_path(current_user) %></li>

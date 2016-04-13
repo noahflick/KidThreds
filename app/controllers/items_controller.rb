@@ -1,4 +1,7 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :authorize, except: [:index, :show]
+  before_action :only_my_items, only: [:edit, :update, :destroy]
 
   def index
     @items = Item.all
@@ -6,7 +9,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
   end
 
   def new
@@ -20,41 +22,42 @@ class ItemsController < ApplicationController
       redirect_to user_path(current_user), notice: 'New Item Created!'
       flash[:success] = 'Item added!'
     else
-      render new_item_path(@item), notice: 'Item failed to add. Try again.'
+      render :new, notice: 'Item failed to add. Try again.'
       flash[:error] = 'Item failed to add. Try again.'
 
     end
   end
 
   def update
+    if @item.update(item_params)
+      redirect_to user_path(current_user), notice: 'Item Updated'
+      flash[:success] = 'Item updated'
+    else
+      render :edit, notice: 'Item failed to update. Try again.'
+      flash[:error] = 'Item failed to update. Try again.'
+
+    end
   end
 
   def edit
-    @item = Item.find(params[:id])
   end
 
   def destroy
-    @item = Item.find(params[:id])
     @item.destroy
     redirect_to :back, notice: "Item Deleted!"
   end
 
-
-  def check_owner
+  def set_item
     @item = Item.find(params[:id])
-    if current_user != @item.user
-      render alert: 'Not authorized - you do not own this item.'
-    end
-
   end
 
-    def item_params
-      params.require(:item).permit(:description, :size, :gender)
-    end
+  def item_params
+    params.require(:item).permit(:description, :size, :gender, :user_id, :image)
+  end
 
-    def only_my_items
-      redirect_to root_path, notice: "you can't edit items you don't own" if (current_user != @item.user)
-    end
+  def only_my_items
+    redirect_to root_path, notice: "you can't edit items you don't own" if (current_user != @item.user)
+  end
 
 
 end

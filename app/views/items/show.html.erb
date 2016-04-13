@@ -10,7 +10,7 @@
 <% if @item.gender %>
 <p>Gender: <%= @item.gender %></p>
 <% end %>
-<p>Owner: <%= link_to 'view user', user_path(@item.user) %> </p>
+<p>Owner: <%= @item.user.name %> | <%= link_to "view user's items", user_path(@item.user) %> </p>
 
 
 
