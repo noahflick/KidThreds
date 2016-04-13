@@ -17,12 +17,12 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.user = current_user
     if @item.save
-
-        redirect_to user_path(current_user)
-        flash[:success] = 'Item added!'
+      redirect_to user_path(current_user), notice: 'New Item Created!'
+      flash[:success] = 'Item added!'
     else
-        flash[:error] = 'Item failed to add. Try again.'
-        render new_item_path(@item)
+      render new_item_path(@item), notice: 'Item failed to add. Try again.'
+      flash[:error] = 'Item failed to add. Try again.'
+
     end
   end
 
@@ -30,12 +30,13 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @item = Item.find(params[:id])
   end
 
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
-    redirect_to user_path(current_user)
+    redirect_to :back, notice: "Item Deleted!"
   end
 
 
