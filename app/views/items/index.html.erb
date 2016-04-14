@@ -9,7 +9,7 @@
     <% if item.image_file_name != nil %>
       <%= image_tag item.image.url(:thumb), size: '100 x 100', alt: "no image"%>
     <% else %>
-      <%= image_tag 'mickeypants.jpg', size: '100' %>
+      <%= image_tag '<%= asset_path("mickeypants.jpg") %>', size: '100' %>
     <% end %>
     <div class='caption'>
       <h3><%= item.description %></h3>
