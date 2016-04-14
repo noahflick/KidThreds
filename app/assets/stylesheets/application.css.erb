@@ -17,9 +17,13 @@
 @import url(https://fonts.googleapis.com/css?family=Bubblegum+Sans);
 
 body.welcome {
- text-align: center;
- background: url(collage.jpg) no-repeat center center;
- background-size: cover;
+  text-align: center;
+  background: url(collage.jpg) no-repeat fixed center;
+  background-size: cover;
+}
+
+body.items, body.users, body.sessions {
+ background-attachment: fixed;
 }
 
 h1 {
@@ -40,6 +44,9 @@ font-size: 60px;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255 , 0), rgba(255,255,255,0))
+  background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255 , 0), rgba(255,255,255,0))
 }
+
+#flash {
+  text-align: center;
 

@@ -13,8 +13,7 @@
     <%= f.text_field :size %>
 
     <%= f.select :gender, [['gender'],["Boys\'",'Boy\'s'],['Girls\'','Girls\''],['Unisex','Unisex']] %>
-
-
+    <p>Image: <%= f.file_field :image %></p>
 
     <%= f.submit  "Post" %>
 <% end %>
