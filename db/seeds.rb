@@ -17,7 +17,7 @@ users = User.create([
 
 
 items = Item.create([
-  {description: 'Mumu for a 3 year old', size: '3T', gender: 'F', user_id: User.first.id},
-  {description: "Boy's Nascar shirt", size: '6-8', gender: 'M', user_id: User.first.id+1},
-  {description: 'Overalls', size: '4-6', gender: 'U', user_id: User.last.id}
+  {description: 'Mumu for a 3 year old', size: '3T', gender: 'F', user: User.first},
+  {description: "Boy's Nascar shirt", size: '6-8', gender: 'M', user: User.all.sample},
+  {description: 'Overalls', size: '4-6', gender: 'U', user: User.all.sample}
 ])

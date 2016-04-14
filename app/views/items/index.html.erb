@@ -17,6 +17,8 @@
       <p><%= item.gender %></p>
       <% if item.user %>
       <p>posted by: <a href= <%= user_path(item.user)%>><%= item.user.name %></a></p>
+      <% else %>
+      <br/>
       <% end %>
       <p><a href= <%= item_path(item) %> class='btn btn-primary btn-xs'>info</a>
       <% if item.user == current_user%>
