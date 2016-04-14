@@ -4,8 +4,7 @@ class ItemsController < ApplicationController
   before_action :only_my_items, only: [:edit, :update, :destroy]
 
   def index
-    @items = Item.all
-    @items = @items.order("created_at DESC")
+    @items = Item.all.order("created_at DESC")
   end
 
   def show
