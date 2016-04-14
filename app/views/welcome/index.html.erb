@@ -1,18 +1,20 @@
 
-<div class ='col-xs-6 col-xs-offset-3'>
-  <div class='lead' style = 'text-align:center'>KidThreds lets you post your kids' outgrown clothes for sale/giveaway to other parents.<br/>
-    Already have an account?
-  </div>
-  <% if current_user %>
-  <% else %>
-  <div style = 'text-align:center'>
-    <div class="form-group">
-      <%= link_to "Login", login_path, class: "btn btn-primary" %>
+<div id='welcomeBody'>
+  <div class ='col-xs-6 col-xs-offset-3' id ='welcomepage'>
+    <div class='lead' style = 'text-align:center'>KidThreds lets you post your kids' outgrown clothes for sale/giveaway to other parents.<br/>
+      Already have an account?
     </div>
-    <p> Or create a new account </p>
-    <div class="form-group">
-      <%= link_to "Register", register_path, class: "btn btn-success" %>
+    <% if current_user %>
+    <% else %>
+    <div style = 'text-align:center'>
+      <div class="form-group">
+        <%= link_to "Login", login_path, class: "btn btn-primary" %>
+      </div>
+      <p> Or create a new account </p>
+      <div class="form-group">
+        <%= link_to "Register", register_path, class: "btn btn-success" %>
+      </div>
     </div>
+    <% end %>
   </div>
-  <% end %>
 </div>

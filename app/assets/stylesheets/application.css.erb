@@ -14,3 +14,32 @@
  *= require_tree .
  *= require_self
  */
+@import url(https://fonts.googleapis.com/css?family=Bubblegum+Sans);
+
+body.welcome {
+ text-align: center;
+ background: url(collage.jpg) no-repeat center center;
+ background-size: cover;
+}
+
+h1 {
+font-size: 60px;
+}
+
+#Header1 {
+  font-family: 'Bubblegum Sans', cursive;
+  z-index: 1;
+  text-align: center;
+}
+
+#Header1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255 , 0), rgba(255,255,255,0))
+}
+

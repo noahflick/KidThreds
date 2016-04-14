@@ -1,3 +1,14 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body.sessions {
+ background: url(kids.jpg) no-repeat center center;
+ background-size: cover;
+}
+
+#loginBox {
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 10px;
+  padding: 15px;
+}

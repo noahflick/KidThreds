@@ -1,9 +1,9 @@
-<div class='col-xs-offset-3 col-xs-6'>
+
+<div class='col-xs-offset-3 col-xs-6' id='loginBox'>
 <h3 style = "text-align:center">Login</h3>
 
 
 <%= form_tag sessions_path do %>
-
   <div class="form-group">
     <%= label_tag :email %>
     <%= text_field_tag :email, params[:email], :class => "form-control" %>
