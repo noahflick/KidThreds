@@ -4,7 +4,7 @@
 KidThreds is an app that allows parents to list clothes that their kids have grown out of in order to sell or give away to other parents.
 Users log in (or crete a new account), then can post clothing items. A logged in user's home page is a listing of all currently posted "Threds" (items). Users can upload a profile image and an image for each item. If a user is interested in an item posted by another user, they can email the user.
 
-Users can view all poasted items, and have full CRUD functionality for their own posted items. The basic site contains 2 models: User and Item.
+Users can view all posted items, and have full CRUD functionality for their own posted items. The basic site contains 2 models: User and Item.
 Time permitting, a Category model will be implemented to help organize listings, followed by Comment model for further functionality.
 Below is the initial Entity Relation Diagram:
 
