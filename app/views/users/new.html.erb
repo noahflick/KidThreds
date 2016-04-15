@@ -1,16 +1,28 @@
-<h1>Register User</h1>
+<div class='col-xs-offset-2 col-xs-4' id='RegisterBox'>
+<h3>New User</h3>
+
 
 <%= form_for @user do |f| %>
-    <% flash.each do |key, msg| %>
-        <div><%= msg %></div>
-    <% end %>
-
-
-    <p>Name: <%= f.text_field :name %></p>
-    <p>Email: <%= f.email_field :email %></p>
-    <p>Password: <%= f.password_field :password %></p>
-    <p>Confirm Password:<%= f.password_field :password_confirmation %>
-    <p>Image: <%= f.file_field :image %></p>
-
-    <p><%= f.submit  "Register" %></p>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.text_field :email, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :confirm_password %>
+    <%= f.password_field :password_confirmation, class: "form-control" %>
+  </div>
+  <div class="actions" style = "text-align:center"><%= f.submit "Create Acount", class: "btn btn-success" %><br/><br/>
+  </div>
 <% end %>
+
+</div>
+
+

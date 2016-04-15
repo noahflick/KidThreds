@@ -3,14 +3,24 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body.items {
- background: url('<%= asset_path("collage.jpg") %>') no-repeat center center;
+ background: url('<%= asset_path("yellkids.jpg") %>') no-repeat center center;
  background-size: cover;
 }
 
-// .itemCard {
-//   height: 370px;
-// }
+body.items.index {
+ background: url('<%= asset_path("crate.jpg") %>') no-repeat center center;
+ background-size: cover;
+}
 
+.itemCard {
+  height: 370px;
+  border: 1px solid red;
+  line-height: 75%;
+}
+
+.myItem {
+  height: auto;
+}
 // #itemsBox {
 //   background-color: rgba(255,255,255,0.7);
 //   border-radius: 10px;
