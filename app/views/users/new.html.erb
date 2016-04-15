@@ -19,6 +19,11 @@
     <%= f.label :confirm_password %>
     <%= f.password_field :password_confirmation, class: "form-control" %>
   </div>
+  <div class="form-group" id ='picupload'>
+    <%= f.label :image %>
+    <%= f.file_field :image, class: 'form-control'%>
+
+  </div>
   <div class="actions" style = "text-align:center"><%= f.submit "Create Acount", class: "btn btn-success" %><br/><br/>
   </div>
 <% end %>

@@ -5,21 +5,31 @@
 body.items {
  background: url('<%= asset_path("yellkids.jpg") %>') no-repeat center center;
  background-size: cover;
+ background-attachment: fixed;
 }
 
 body.items.index {
- background: url('<%= asset_path("crate.jpg") %>') no-repeat center center;
- background-size: cover;
+  background: url('<%= asset_path("crate.jpg") %>') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body.items.new {
+  background: url('<%= asset_path("naturekids.jpg") %>') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+
 }
 
 .itemCard {
+  margin: 0 auto;
   height: 370px;
-  border: 1px solid red;
   line-height: 75%;
 }
 
 .myItem {
   height: auto;
+  background-color: rgba(255,255,255,0.7);
 }
 // #itemsBox {
 //   background-color: rgba(255,255,255,0.7);
