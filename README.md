@@ -22,4 +22,5 @@ Planned features:
 Location - I would ike to add functionality so users can  vieew/search only posts within practical range of their (or any) location
 Category - users should be able to group items/searches by category, and/or the site should support use for items beyond clothing
 Comments/ user interactions - Users should be able to comment on items or to other users.
+Following - Users should be able to "follow" other users, and be informed when a user they are following has posted any new items.
 
